@@ -1,25 +1,16 @@
-# RemoteRecruit - Features Landing Page
+# RemoteRecruit - Landing Page
 
-A pixel-perfect, highly optimized, and responsive React landing page showcasing the features and pricing of the **RemoteRecruit** platform. Designed and built to match Figma design references with subtle, high-performance scroll and hover animations.
-
----
-
-## 📸 Screenshots & Preview
-
-*Visual design reference and previews can be found in the project's documentation folder.*
+A simple, fast, and beautiful landing page for **RemoteRecruit**. It shows the features and pricing of the platform.
 
 ---
 
-## 🛠️ Tech Stack & Dependencies
+## 🛠️ Tools Used
 
-| Category | Technology | Purpose |
-|----------|------------|---------|
-| Core | React 19, TypeScript | Declarative UI structure and type-safe development |
-| Build Tool | Vite 6 | Next-generation build tool and dev server |
-| Styling | Tailwind CSS v4 | Utility-first styling with modern theme overrides |
-| Motion | Framer Motion 11 | Smooth, high-performance web animations |
-| Icons | React Icons | Clean vector icon graphics |
-| Typography | Google Fonts (Poppins) | Elegant font family styling matching Figma |
+- **React 19 & TypeScript**: For building the page structure.
+- **Vite 6**: For fast building and development.
+- **Tailwind CSS v4**: For page styles.
+- **Framer Motion 11**: For smooth animations.
+- **React Icons**: For clean vector icons.
 
 ---
 
@@ -28,53 +19,59 @@ A pixel-perfect, highly optimized, and responsive React landing page showcasing 
 ```
 src/
  ├── animations/
- │    └── variants.ts      # Reusable motion variant presets (springs, fades, clips)
+ │    └── variants.ts      # Animation settings
  ├── assets/
- │    └── images/          # Optimized graphic assets (PNG, SVG, etc.)
+ │    └── images/          # Images and SVGs
  ├── components/
- │    ├── layout/          # Layout components (Navbar, Footer, RootLayout)
- │    ├── sections/        # Section views (Hero, Feature, FAQ, SignUpCTA, Pricing)
- │    └── ui/              # Reusable atomic UI elements (Container, ScrollToTop, SectionBadge, PricingCard)
- ├── data/                 # Static data configurations (pricing tiers, FAQs, feature listings)
+ │    ├── layout/          # Navbar, Footer, and Layout
+ ├── components/
+ │    ├── sections/        # Main sections of the page
+ ├── components/
+ │    └── ui/              # Small UI elements
+ ├── data/                 # Text data (FAQs, pricing, features)
  ├── pages/
- │    └── HomePage.tsx     # Combined structural landing page
+ │    └── HomePage.tsx     # The home page component
  ├── styles/
- │    └── globals.css      # Core theme directives, scrollbars, and tailwind utility classes
- ├── App.tsx               # Main application entry point
- └── main.tsx              # App bootstrapper
+ │    └── globals.css      # Core styles
+ ├── App.tsx               # Main app file
+ └── main.tsx              # App start file
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 How to Run the Project
 
-### Prerequisites
+### What you need
+Make sure you have **Node.js** installed on your computer.
 
-Ensure you have **Node.js (v18+)** and **npm** installed.
-
-### 1. Install Dependencies
+### 1. Install dependencies
+Run this command to install the packages:
 ```bash
 npm install
 ```
 
-### 2. Run the Development Server
+### 2. Run in development mode
+Run this command to start the local site:
 ```bash
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Now, open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### 3. Build for Production
+### 3. Build for production
+To build a fast version of the site for hosting:
 ```bash
 npm run build
 ```
-The build artifacts will be generated in the `/dist` directory.
+The files will be saved in the `dist` folder.
 
-### 4. Preview the Production Build
+### 4. Test the built project
+To test the production build locally:
 ```bash
 npm run preview
 ```
 
-### 5. Run Linter
+### 5. Check code quality
+To check the code for errors:
 ```bash
 npm run lint
 ```
@@ -83,12 +80,11 @@ npm run lint
 
 ## ⚡ Deployment
 
-This project is configured to be deployed on **Vercel** via the `vercel.json` file. The deployment maps all request routes to the static `index.html` file to support frontend routing/fallback.
+This website is set up to deploy on **Vercel** using the `vercel.json` file. All pages load from `index.html`.
 
 ---
 
-## ⚠️ Known Issues & Limitations
+## ⚠️ Important Details
 
-1. **Figma Desktop-Only Layout**: The Figma reference design specifies a 1440px desktop layout. Tablet and mobile responsive layouts have been custom-crafted using clean tailwind breakpoints (e.g. `xl`, `lg`, `md`, `sm`) to ensure proper responsive wrapping without compromising the original design aesthetics.
-2. **Animation Layout Shifts**: Elements animated on scroll have subtle slide distance thresholds (e.g. `y: 24` or `x: 48`) to ensure animations do not cause visual jumps or layout shifts on small screens.
-3. **Optimized External Assets**: Embedded background graphics use localized static images to avoid network fetch latency and styling flash effects on initial render.
+1. **Responsive Design**: The original design was made for big screens. We added responsive styles so the page looks good on mobile phones and tablets too.
+2. **Smooth Scroll**: Animations are adjusted so they do not lag or jump on small screens.
