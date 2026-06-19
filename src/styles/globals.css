@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-rr-navy: #2B4490;
+  --color-rr-navy-dark: #1e3066;
+  --color-rr-navy-light: #3e5bbb;
+  
+  --color-rr-teal: #3DBDE3;
+  --color-rr-teal-light: #E1F6FC;
+  --color-rr-teal-dark: #2ba8cc;
+  
+  --color-rr-bg-light: #F0F4FF;
+  --color-rr-text-dark: #1E293B;
+  --color-rr-text-muted: #64748B;
+
+  --font-sans: "Poppins", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-rr-text-dark antialiased overflow-x-hidden;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+
